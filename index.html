@@ -3,25 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!--Styles-->
+  <link rel="stylesheet" href="styles.css">
+  <!--JS-->
+  <script src="scripts.js" defer></script>
   <title>Frontend Mentor | Article preview component</title>
-
 </head>
 <body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
+  <section class="card">
+    <header class="card__header">
+      <img class="card__header-hero" src="images/drawers.jpg" alt="green table with portraits and bouquet of flowers on">
+      <h1 class="card__header-title">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h1>
+    </header>
+    <main class="card__content">
+      <p class="card__content-text">Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.</p>
+    </main>
+    <footer class="card__footer">
+      <img class="card__footer-avatar" src="images/avatar-michelle.jpg" alt="young woman blond hair and casual outfit">
+      <p class="card__footer-author">Michelle Appleton</p>
+      <p class="card__footer-date">28 Jun 2020</p>
+      <img class="card__footer-share-icon" src="images/icon-share.svg" alt="arrow pointing to right">
+    </footer>
+  </section>
 </body>
 </html>
