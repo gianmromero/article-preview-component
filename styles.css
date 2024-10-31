@@ -8,3 +8,178 @@
 
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8125rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--light-grayish-blue);
+}
+
+.card {
+    width: 327px;
+    height: 512px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+    background-color: white;
+    border-radius: 0.625em;
+}
+
+.card__header {
+    grid-area: header;
+    width: 327px;
+    height: 230px;
+    border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;
+    background: url(images/drawers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.card__content {
+    grid-area: content;
+}
+.card__footer {
+    grid-area: footer;
+}
+
+.card__content-title {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    letter-spacing: 0.0125rem;
+    color: var(--very-dark-grayish-blue);
+    padding: 0 2em 0.75em 2em;
+}
+.card__content-text {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.0075rem;
+    color: var(--desaturated-dark-blue);
+    padding: 0 2em 0 3em;
+} 
+
+.card__footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "avatar name share"
+    "avatar date share";
+}
+.card__footer-avatar {
+    grid-area: avatar;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    justify-self: center;
+    margin-right: 1em;
+    margin-left: 3em;
+    margin-bottom: 1.25em;
+    
+}
+.card__footer-author {
+    grid-area: name;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.25rem;
+    letter-spacing: 0.0075rem;
+    color: var(--very-dark-grayish-blue);
+    
+}
+.card__footer-date {
+    grid-area: date;
+    font-size: 0.75rem;
+    font-weight: medium;
+    line-height: 1.25rem;
+    letter-spacing: 0.0075rem;
+    color: var(--grayish-blue);
+    align-self: stretch;
+    margin-top: -15px;
+}
+.card__footer-share-icon {
+    grid-area: share;
+    justify-self: center;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    padding: 0.625em;
+    margin: 0 2em 1.5em 3.6875em;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+   .card {
+        width: 730px;
+        height: 280px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "header content"
+        "header content"
+        "header info";
+   }
+   .card__header {
+        grid-area: header;
+        width: 285px;
+        height: 280px;
+        border-radius: 0.625em 0 0 0.625em;
+   }
+   .card__content-title {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        padding: 2em 1.5em 0.75em 1.5em;
+   }
+   .card__content-text {
+        padding: 0 2.5em 1.25em 2.5em;
+   }
+   .card__footer {
+        grid-area: info;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "right author left"
+        "right date left";
+   }
+   .card__footer-avatar {
+        grid-area: right;
+        margin-left: 40px;
+        margin-right: 16px;
+        margin-bottom: 32px;
+   }
+   .card__footer-author {
+        grid-area: author;
+        align-self: stretch;
+        
+   }
+   .card__footer-date {
+        grid-area: date;
+        margin-top: -30px;
+   }
+   .card__footer-share-icon {
+        grid-area: left;
+        margin-right: 40px;
+        margin-bottom: 24px;
+   }
+
+}
