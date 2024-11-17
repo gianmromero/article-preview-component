@@ -113,7 +113,7 @@ body {
     letter-spacing: 0.0075rem;
     color: var(--grayish-blue);
     align-self: stretch;
-    margin-top: -15px;
+    margin-top: -0.9375em;
 }
 .card__footer-share-icon {
     grid-area: share;
@@ -167,9 +167,9 @@ body {
    }
    .card__footer-avatar {
         grid-area: right;
-        margin-left: 40px;
-        margin-right: 16px;
-        margin-bottom: 32px;
+        margin-left: 2.5em;
+        margin-right: 1em;
+        margin-bottom: 2em;
    }
    .card__footer-author {
         grid-area: author;
@@ -178,12 +178,12 @@ body {
    }
    .card__footer-date {
         grid-area: date;
-        margin-top: -30px;
+        margin-top: -1.875em;
    }
    .card__footer-share-icon {
         grid-area: left;
-        margin-right: 40px;
-        margin-bottom: 24px;
+        margin-right: 2.5em;
+        margin-bottom: 1.5em;
    }
 
 }
